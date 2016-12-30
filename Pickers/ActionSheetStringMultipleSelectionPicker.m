@@ -198,7 +198,8 @@
     
     for (int j = 0; j < self.selectedIndex.count; j++) {
         
-        id object = [self.data objectAtIndex:j];
+        NSNumber *selectedIndex = self.selectedIndex[j];
+        id object = self.data[selectedIndex.integerValue];
         
         [indexes addObject: object];
     }
